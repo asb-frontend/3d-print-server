@@ -26,13 +26,6 @@ yarn-error.log
 # Coverage reports
 coverage/
 
-# Compiled JavaScript files (if applicable)
-*.js
-
-# Typescript related files (if applicable)
-*.ts
-*.tsx
-
 # Front-end build output (if your Express app serves a React or similar frontend)
 public/build/
 public/dist/
