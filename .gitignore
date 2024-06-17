@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+output/
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary testing or debugging files
+*.log
+npm-debug.log
+yarn-error.log
+
+# Environment specific files
+.env
+.env.local
+.env.production
+.env.development
+
+# Coverage reports
+coverage/
+
+# Compiled JavaScript files (if applicable)
+*.js
+
+# Typescript related files (if applicable)
+*.ts
+*.tsx
+
+# Front-end build output (if your Express app serves a React or similar frontend)
+public/build/
+public/dist/
+
+# Specific files or directories you want to ignore
+# Add more patterns as needed
+*~
+test.js  # Example of a specific test file to ignore
