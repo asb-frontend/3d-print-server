@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: local_pgdb
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Password1!  # Replace with a strong password
+      POSTGRES_DB: 3d-printer-db        # Replace with your desired database name
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persist data volume
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "8888:80"  # Map pgAdmin port to 5050 on host machine
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "3d-printer-admin@yopmail.com"  # Replace with a valid email
+      PGADMIN_DEFAULT_PASSWORD: "Password1!"          # Replace with a strong password
+      PGADMIN_SETUP_EMAIL: "3d-printer-admin@yopmail.com"    # Replace with a valid email
+      PGADMIN_SETUP_PASSWORD: "Password1!"              # Replace with a strong password
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  postgres_data: {}
+  pgadmin_data: {}
